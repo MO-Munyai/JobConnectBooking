@@ -1,12 +1,14 @@
-import { StatusBar } from 'expo-status-bar';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { StyleSheet, Text, View } from 'react-native';
+import BookingPage from './src/pages/BookingPage';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Router>
+      <Routes>       
+        <Route path="/bookings" element={<BookingPage />} />
+      </Routes>
+    </Router>
   );
 }
 
